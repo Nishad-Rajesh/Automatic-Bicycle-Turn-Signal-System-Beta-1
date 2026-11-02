@@ -3,13 +3,44 @@ An automatic and manual turn signal system for a bicycle.
 
 Arduino as center hub; sends flow of electricity to turn signals
 
-  3-way switch with left, right, and center positions
-    Left position illuminates left front and back turn signals
-    center position transfers led signal command to tilt sensor
-    Right position illuminates right front and back turn signals
+# Automated Bicycle Turn-Signal & Headlight System
 
-Need to find a way to factor in bumps and shakes for tilt sensor
-  Can I make it more/less sensitive based on tilt angle?
+An automated bicycle safety system powered by an **Arduino Uno R3** and an **MPU-6050 accelerometer/gyroscope**. It features automated gyroscopic turn signals, a manual joystick override, and persistent headlight controls.
+
+---
+
+## Control Scheme
+
+* **Push Joystick Up (Once):** Headlight **ON** (stays solid as a running light).
+* **Push Joystick Up (Again):** Headlight **OFF**.
+* **Push Joystick Down (Once):** Tilt/Auto-Lean Sensor **ACTIVE**.
+* **Push Joystick Down (Again):** Tilt/Auto-Lean Sensor **INACTIVE**.
+* **Joystick Left / Right:** Manual turn signal override (instantly takes priority over auto-lean mode).
+* **Automatic Lean:** Tilting the sensor past $\pm 3.8\text{ m/s}^2$ automatically triggers the corresponding turn signal.
+
+---
+
+## Parts List
+
+| Category | Quantity | Component Name | Description / Purpose |
+| :--- | :---: | :--- | :--- |
+| **Microcontroller** | 1x | **Arduino Uno R3** | Main board running the control logic and sketch. |
+| **Sensors** | 1x | **MPU-6050 Module** | 6-axis accelerometer and gyroscope used for auto-lean detection. |
+| **Input Controls** | 1x | **Analog Joystick Module** | 2-axis joystick with built-in push-button switch (VRx, VRy, SW). |
+| **Lighting** | 1x | **White LED (5mm)** | Headlight running light (Pin 10). |
+| **Lighting** | 2x | **Amber / Yellow LEDs (5mm)** | Left and Right Turn Signal indicators (Pins 8 & 9). |
+| **Passives** | 3x | **220Ω – 330Ω Resistors** | Current-limiting resistors placed in series with each LED. |
+| **Prototyping** | 1x | **Solderless Breadboard** | Standard full-size or half-size breadboard for circuit assembly. |
+| **Prototyping** | 1x Set | **Assorted Jumper Wires** | Male-to-Male and Male-to-Female jumper wires for connections. |
+| **Connectivity** | 1x | **USB Programming Cable** | Connects Arduino to your computer for code uploads (`arduino-cli`). |
+| **Power** | 1x | **Portable Power Source** | *Optional for bicycle mounting:* USB power bank or 9V battery with a barrel jack adapter. |
+
+---
+
+## Complete Wiring Guide
+
+### Master Pin Connection Table
+
 | Component | Component Pin | Arduino Pin | Connection & Notes |
 | :--- | :--- | :--- | :--- |
 | **Arduino Uno** | 5V | — | Breadboard Red (+) Power Rail |
@@ -54,3 +85,7 @@ Need to find a way to factor in bumps and shakes for tilt sensor
      * Right LED Anode $\rightarrow$ Resistor $\rightarrow$ **Pin 9**
      * Headlight LED Anode $\rightarrow$ Resistor $\rightarrow$ **Pin 10**
      * All LED Cathodes (short legs) $\rightarrow$ **Ground Rail**
+
+
+  delay(50);
+}
