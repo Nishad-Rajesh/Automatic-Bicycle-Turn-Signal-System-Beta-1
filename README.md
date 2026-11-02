@@ -87,5 +87,4 @@ An automated bicycle safety system powered by an **Arduino Uno R3** and an **MPU
      * All LED Cathodes (short legs) $\rightarrow$ **Ground Rail**
 
 
-  delay(50);
 }
