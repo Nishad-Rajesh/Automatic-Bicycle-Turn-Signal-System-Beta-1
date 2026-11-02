@@ -85,6 +85,3 @@ An automated bicycle safety system powered by an **Arduino Uno R3** and an **MPU
      * Right LED Anode $\rightarrow$ Resistor $\rightarrow$ **Pin 9**
      * Headlight LED Anode $\rightarrow$ Resistor $\rightarrow$ **Pin 10**
      * All LED Cathodes (short legs) $\rightarrow$ **Ground Rail**
-
-
-}
