@@ -1,11 +1,13 @@
 # AMLBIS-V1
+Automatic/Manual Led Bicycle Indicator System
+
 An automatic and manual turn signal system for a bicycle.
 
 Arduino as center hub; sends flow of electricity to turn signals
 
 # Automated Bicycle Turn-Signal & Headlight System
 
-An automated bicycle safety system powered by an **Arduino Uno R3** and an **MPU-6050 accelerometer/gyroscope**. It features automated gyroscopic turn signals, a manual joystick override, and persistent headlight controls.
+An automated bicycle safety system powered by an **Arduino Uno R3** and an **MPU-6050 accelerometer/gyroscope**. It features automated gybroscopic turn signals, a manual joystick override, and persistent headlight controls.
 
 ---
 
@@ -17,6 +19,7 @@ An automated bicycle safety system powered by an **Arduino Uno R3** and an **MPU
 * **Push Joystick Down (Again):** Tilt/Auto-Lean Sensor **INACTIVE**.
 * **Joystick Left / Right:** Manual turn signal override (instantly takes priority over auto-lean mode).
 * **Automatic Lean:** Tilting the sensor past $\pm 3.8\text{ m/s}^2$ automatically triggers the corresponding turn signal.
+* **Joystick Switch:** Hazard lights (all lights blink).
 
 ---
 
