@@ -32,11 +32,11 @@ An automated bicycle safety system powered by an **Arduino Uno R3** and an **MPU
 | **Input Controls** | 1x | **Analog Joystick Module** | 2-axis joystick with built-in push-button switch (VRx, VRy, SW). |
 | **Lighting** | 1x | **White LED (5mm)** | Headlight running light (Pin 10). |
 | **Lighting** | 2x | **Amber / Yellow LEDs (5mm)** | Left and Right Turn Signal indicators (Pins 8 & 9). |
-| **Passives** | 3x | **220Ω – 330Ω Resistors** | Current-limiting resistors placed in series with each LED. |
 | **Prototyping** | 1x | **Solderless Breadboard** | Standard full-size or half-size breadboard for circuit assembly. |
 | **Prototyping** | 1x Set | **Assorted Jumper Wires** | Male-to-Male and Male-to-Female jumper wires for connections. |
 | **Connectivity** | 1x | **USB Programming Cable** | Connects Arduino to your computer for code uploads (`arduino-cli`). |
 | **Power** | 1x | **Portable Power Source** | *Optional for bicycle mounting:* USB power bank or 9V battery with a barrel jack adapter. |
+
 
 ---
 
@@ -65,11 +65,11 @@ An automated bicycle safety system powered by an **Arduino Uno R3** and an **MPU
 | **Joystick** | VRx | A0 | Arduino Analog Pin A0 |
 | **Joystick** | VRy | A1 | Arduino Analog Pin A1 |
 | **Joystick** | SW | Pin 7 | Arduino Digital Pin 7 |
-| **Left LED** | Anode (+) | Pin 8 | Connected via 220Ω–330Ω resistor |
+| **Left LED** | Anode (+) | Pin 8 | Connected via wire resistor |
 | **Left LED** | Cathode (-) | GND | Breadboard Blue (-) Ground Rail |
-| **Right LED** | Anode (+) | Pin 9 | Connected via 220Ω–330Ω resistor |
+| **Right LED** | Anode (+) | Pin 9 | Connected via wire resistor |
 | **Right LED** | Cathode (-) | GND | Breadboard Blue (-) Ground Rail |
-| **Headlight LED** | Anode (+) | Pin 10 | Connected via 220Ω–330Ω resistor |
+| **Headlight LED** | Anode (+) | Pin 10 | Connected via wire resistor |
 | **Headlight LED** | Cathode (-) | GND | Breadboard Blue (-) Ground Rail |
 
 ### Breadboard Assembly Instructions
@@ -83,7 +83,6 @@ An automated bicycle safety system powered by an **Arduino Uno R3** and an **MPU
 3. **Analog Joystick Module:** 
    * Connect `VCC` to power, `GND` to ground, `VRx` to `A0`, `VRy` to `A1`, and `SW` to digital pin `7`.
 4. **LED Assemblies:** 
-   * Always place a **220Ω–330Ω resistor** in series with the positive Anode (long leg) of each LED:
      * Left LED Anode $\rightarrow$ Resistor $\rightarrow$ **Pin 8**
      * Right LED Anode $\rightarrow$ Resistor $\rightarrow$ **Pin 9**
      * Headlight LED Anode $\rightarrow$ Resistor $\rightarrow$ **Pin 10**
