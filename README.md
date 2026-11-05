@@ -1,5 +1,5 @@
-# AMLBIS-V1
-Automatic/Manual Led Bicycle Indicator System
+# ABIS-V1
+Automatic Bicycle Indicator System
 
 An automatic and manual turn signal system for a bicycle.
 
